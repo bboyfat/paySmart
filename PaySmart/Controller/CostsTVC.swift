@@ -16,31 +16,13 @@ class CostsTVC: UITableViewController {
 
     var costs:[Cost]?
     
-//    private func fetchDataTable(){
-//
-////        let context = CoreDataManager.shared.persistentContiner.viewContext
-////
-////        let fetchRequset = NSFetchRequest<Cost>(entityName: "Cost")
-////
-////        do{
-////            let fetch = try context.fetch(fetchRequset)
-////
-////            self.costs = fetch
-//////            self.delegate?.didAddCosts(costs: fetch)
-//////            self.delegate?.fetchCost()
-////
-////           } catch let fetchErr {
-////            print("failed, when tried to fetch \(fetchErr)")
-////        }
-//
-//
-//    }
+
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        fetchDataTable()
+
         
             tableView.backgroundView?.backgroundColor = UIColor.clear
             view.backgroundColor = UIColor.lightGray

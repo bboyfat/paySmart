@@ -50,12 +50,7 @@ class InfoViewController: UIViewController, CostModelDelegate {
             } else {
             self.wallet = wallets[0]
             }
-//            self.incomes += fetch[0].income
-//            fetch.forEach { (income) in
-//                incomes = income.income
-//            }
-            //self.incomes = fetch[0].income
-            //self.incomeBtnLabel.setTitle("Income: \(incomes)", for: .normal)
+
             
         } catch let fetchErr{
             print("failed, when tried to fetch \(fetchErr)")
@@ -70,18 +65,15 @@ class InfoViewController: UIViewController, CostModelDelegate {
         
         let fetchRequset = NSFetchRequest<Cost>(entityName: "Cost")
         
-        
         do{
             let fetch = try context.fetch(fetchRequset)
             self.costs = fetch
-//            self.costsBtnLabel.setTitle(self.costToString(), for: .normal)
-//            self.currentBtnLabel.setTitle(self.currentBalance(), for: .normal)
+
             
         } catch let fetchErr{
             print("failed, when tried to fetch \(fetchErr)")
         }
-        
-    }
+       }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +82,7 @@ class InfoViewController: UIViewController, CostModelDelegate {
         fetchCost()
         didAddCosts()
         fetchDataIncome()
-//        self.costsBtnLabel.setTitle(self.costToString(), for: .normal)
-//        self.currentBtnLabel.setTitle(self.currentBalance(), for: .normal)
+
     }
 
 
@@ -99,50 +90,10 @@ class InfoViewController: UIViewController, CostModelDelegate {
     
 
     @IBAction func incomeButton(_ sender: Any) {
-       
-        
+     
         incomeAlert()
         
-//        let ac = UIAlertController(title: "Add", message: nil, preferredStyle: .alert)
-//        let action = UIAlertAction(title: "OK", style: .default) { (action) in
-//            guard let text = ac.textFields?.first?.text else {return}
-//
-//           let context = CoreDataManager.shared.persistentContiner.viewContext
-//
-//            let wallet = NSEntityDescription.insertNewObject(forEntityName: "Wallet", into: context)
-//
-//
-//              wallet.setValue(Double(text)!, forKey: "income")
-//
-//
-//            do{
-//                try context.save()
-//
-//            } catch let saveIncErr{
-//                print("Failed to save income \(saveIncErr)")
-//            }
-//
-//            //self.fetchDataIncome()
-//
-//            self.costsBtnLabel.setTitle(self.costToString(), for: .normal)
-//            self.currentBtnLabel.setTitle(self.currentBalance(), for: .normal)
-//
-//
-//
-//            //self.addCostsBtnLbl.isEnabled = true
-//
-//
-//        }
-//        ac.addTextField { (text) in
-//            text.placeholder = "Add cost here"
-//            text.keyboardType = .numberPad
-//        }
-//        ac.addAction(action)
-//        present(ac, animated: true
-//            , completion: nil)
-        
-        
-    }
+     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "costsSegue"{
@@ -191,16 +142,9 @@ class InfoViewController: UIViewController, CostModelDelegate {
                 print("Failed to save income \(saveIncErr)")
             }
             
-            //self.fetchDataIncome()
-            
             self.costsBtnLabel.setTitle(self.costToString(), for: .normal)
             self.currentBtnLabel.setTitle(self.currentBalance(), for: .normal)
-           // self.currentBtnLabel.setTitle("\(self.wallet?.income)", for: .normal)
-
-            
-            
-            
-            //self.addCostsBtnLbl.isEnabled = true
+           
             
             
         }

@@ -134,7 +134,10 @@ class CostsTVC: UITableViewController {
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.delegate?.fetchCost()
+    }
     
     
     func checkCosts() {

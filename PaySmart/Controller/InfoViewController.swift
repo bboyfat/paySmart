@@ -79,7 +79,7 @@ class InfoViewController: UIViewController, CostModelDelegate {
         super.viewDidLoad()
         
         
-        fetchCost()
+        //fetchCost()
         didAddCosts()
         fetchDataIncome()
 
@@ -161,6 +161,7 @@ class InfoViewController: UIViewController, CostModelDelegate {
     override func viewDidAppear(_ animated: Bool) {
          print(costs.count)
         fetchCost()
+        didAddCosts()
     }
 
 }

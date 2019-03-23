@@ -14,33 +14,33 @@ class CostsTVC: UITableViewController {
     
     var delegate: CostModelDelegate?
 
-    var costs:[Cost] = []
+    var costs:[Cost]?
     
-    private func fetchDataTable(){
-
-        let context = CoreDataManager.shared.persistentContiner.viewContext
-        
-        let fetchRequset = NSFetchRequest<Cost>(entityName: "Cost")
-        
-        do{
-            let fetch = try context.fetch(fetchRequset)
-            
-            self.costs = fetch
-            self.delegate?.didAddCosts(costs: fetch)
-            self.delegate?.fetchCost()
-            
-           } catch let fetchErr {
-            print("failed, when tried to fetch \(fetchErr)")
-        }
-        
-        
-    }
+//    private func fetchDataTable(){
+//
+////        let context = CoreDataManager.shared.persistentContiner.viewContext
+////
+////        let fetchRequset = NSFetchRequest<Cost>(entityName: "Cost")
+////
+////        do{
+////            let fetch = try context.fetch(fetchRequset)
+////
+////            self.costs = fetch
+//////            self.delegate?.didAddCosts(costs: fetch)
+//////            self.delegate?.fetchCost()
+////
+////           } catch let fetchErr {
+////            print("failed, when tried to fetch \(fetchErr)")
+////        }
+//
+//
+//    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchDataTable()
+//        fetchDataTable()
         
             tableView.backgroundView?.backgroundColor = UIColor.clear
             view.backgroundColor = UIColor.lightGray
@@ -52,7 +52,6 @@ class CostsTVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        tableView.delegate = self
     }
 
     // MARK: - Table view data source
@@ -67,7 +66,7 @@ class CostsTVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let count = costs.count
+        guard let count = costs?.count else { return 0}
         return count
        
     }
@@ -76,8 +75,8 @@ class CostsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "costCell", for: indexPath)
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "costCell")
-        let cost = costs[indexPath.row].cost
-        let name = costs[indexPath.row].name 
+        let cost = costs?[indexPath.row].cost
+        let name = costs?[indexPath.row].name
         cell.textLabel?.text = name
         cell.backgroundColor = UIColor.clear
         
@@ -89,9 +88,9 @@ class CostsTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (rowAction, indexPath) in
-            let cost = self.costs[indexPath.row]
+            guard let cost = self.costs?[indexPath.row] else { return }
             // deleting from table view
-            self.costs.remove(at: indexPath.row)
+            self.costs?.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             // delete from Core Data
             
@@ -126,7 +125,7 @@ class CostsTVC: UITableViewController {
             
             let context = CoreDataManager.shared.persistentContiner.viewContext
             
-            let cost = NSEntityDescription.insertNewObject(forEntityName: "Cost", into: context)
+            let cost = NSEntityDescription.insertNewObject(forEntityName: "Cost", into: context) as! Cost
             
             cost.setValue(Int(alert.textFields![1].text!), forKey: "cost")
             cost.setValue(alert.textFields![0].text, forKey: "name")
@@ -137,9 +136,11 @@ class CostsTVC: UITableViewController {
             
             do{
                 try context.save()
-                self.costs.append(cost as! Cost)
-                self.tableView.reloadData()
+                self.costs?.append(cost)
                 
+//                self.delegate?.fetchCost()
+                self.tableView.reloadData()
+//                self.delegate?.didAddCosts()
             } catch let saveErr{
                 print("Failed to save \(saveErr)")
             }
@@ -157,5 +158,4 @@ class CostsTVC: UITableViewController {
     func checkCosts() {
         
     }
-   
 }

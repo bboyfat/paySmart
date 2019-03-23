@@ -10,6 +10,6 @@ import Foundation
 
 
 protocol CostModelDelegate{
-    func didAddCosts(costs: [Cost])
+    func didAddCosts()
     func fetchCost()
 }

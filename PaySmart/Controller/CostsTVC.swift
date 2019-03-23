@@ -87,6 +87,26 @@ class CostsTVC: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (rowAction, indexPath) in
+            let cost = self.costs[indexPath.row]
+            // deleting from table view
+            self.costs.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            // delete from Core Data
+            
+            let context = CoreDataManager.shared.persistentContiner.viewContext
+            context.delete(cost)
+            do{
+                try context.save()
+            } catch {
+                print("Failed when trying to save after deleting")
+            }
+        }
+        
+        return [deleteAction]
+    }
+    
     func addAlert(){
         let alert = UIAlertController(title: "Add Cost", message: nil, preferredStyle: .alert)
         

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qfu-QD-SPe">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainScreen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="PaySmart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="8eJ-KO-Bh9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nP-z3-yTy" customClass="Button" customModule="PaySmart" customModuleProvider="target">
+                                <rect key="frame" x="16" y="680" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.72597388698630139" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9f8-J1-W5f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                <state key="normal" title="Chek The Balance">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="uP7-K4-5ID" kind="show" identifier="infoSegue" id="tg9-4B-Hgl"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="344" translatesAutoresizingMaskIntoConstraints="NO" id="YQY-xE-taf">
+                                <rect key="frame" x="0.0" y="104" width="375" height="401"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAY- SMART." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBP-fH-tN8">
+                                        <rect key="frame" x="132.33333333333334" y="0.0" width="110.33333333333334" height="34"/>
+                                        <color key="tintColor" red="1" green="0.99670672770000002" blue="0.94484974450000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110.33" id="eoG-NV-ssx"/>
+                                            <constraint firstAttribute="height" constant="34" id="fca-H3-AWv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watch your money!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSM-RD-Yll">
+                                        <rect key="frame" x="76" y="378" width="223" height="23"/>
+                                        <color key="tintColor" red="1" green="0.99670672770000002" blue="0.94484974450000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="223" id="2oL-Ud-kJR"/>
+                                            <constraint firstAttribute="height" constant="23" id="95B-eU-l0M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="TBP-fH-tN8" firstAttribute="centerX" secondItem="YQY-xE-taf" secondAttribute="centerX" id="2I5-1F-12c"/>
+                                    <constraint firstItem="mSM-RD-Yll" firstAttribute="centerX" secondItem="YQY-xE-taf" secondAttribute="centerX" id="Dv0-X6-vQ8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8nP-z3-yTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7V9-QZ-tpa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8nP-z3-yTy" secondAttribute="bottom" constant="48" id="DNI-r2-nhz"/>
+                            <constraint firstItem="YQY-xE-taf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="HlM-i5-lsk"/>
+                            <constraint firstItem="8eJ-KO-Bh9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JFc-Ml-OX5"/>
+                            <constraint firstItem="8eJ-KO-Bh9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RQK-81-sMM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YQY-xE-taf" secondAttribute="trailing" id="fUg-Zg-1N7"/>
+                            <constraint firstItem="YQY-xE-taf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g2R-gF-kQz"/>
+                            <constraint firstAttribute="bottom" secondItem="8eJ-KO-Bh9" secondAttribute="bottom" id="p7p-BP-2fA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8nP-z3-yTy" secondAttribute="trailing" constant="16" id="xZL-tc-NI1"/>
+                            <constraint firstItem="8eJ-KO-Bh9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zjS-om-vYT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="MainScreen" id="5X7-Y4-1JF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.2" y="133.00492610837438"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="xjW-WX-5jN">
+            <objects>
+                <viewController id="uP7-K4-5ID" customClass="InfoViewController" customModule="PaySmart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yzL-4F-U5i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart" translatesAutoresizingMaskIntoConstraints="NO" id="kCI-lu-O5u">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PR1-Pd-7MP" customClass="Button" customModule="PaySmart" customModuleProvider="target">
+                                <rect key="frame" x="16" y="688" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.72597388699999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QlL-mj-p0m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                <state key="normal" title="Add Costs">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="xH9-Pb-cR9" kind="show" identifier="costsSegue" id="6ph-qr-KMh"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rUp-tY-tNW">
+                                <rect key="frame" x="16" y="211" width="347" height="190"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fb9-Xs-lqS" customClass="Button" customModule="PaySmart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="347" height="50"/>
+                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.72597388699999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="347" id="CHm-iI-bjD"/>
+                                            <constraint firstAttribute="height" constant="50" id="GLf-N2-27v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                        <state key="normal" title="Income">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XH-5S-cgw" customClass="Button" customModule="PaySmart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="70" width="347" height="50"/>
+                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.72597388699999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="4ee-ZZ-p8k"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="347" id="ztP-dQ-egq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                        <state key="normal" title="Costs">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaO-Kf-m3t" customClass="Button" customModule="PaySmart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="347" height="50"/>
+                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.72597388699999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="PAB-Uq-P1x"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="347" id="iYa-pJ-iwY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="22"/>
+                                        <state key="normal" title="Current">
+                                            <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAY- SMART." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjD-Ve-vfs">
+                                <rect key="frame" x="126.66666666666669" y="88" width="122" height="55"/>
+                                <color key="tintColor" red="1" green="0.99670672770000002" blue="0.94484974450000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="h4o-EY-5Vi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="kOC-CN-XhE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="10"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PR1-Pd-7MP" firstAttribute="leading" secondItem="rUp-tY-tNW" secondAttribute="leading" id="3Q1-vb-at6"/>
+                            <constraint firstItem="rUp-tY-tNW" firstAttribute="top" secondItem="JjD-Ve-vfs" secondAttribute="bottom" constant="68" id="4Y8-7H-bGh"/>
+                            <constraint firstItem="MdY-Ov-tUE" firstAttribute="trailing" secondItem="rUp-tY-tNW" secondAttribute="trailing" constant="12" id="J54-x8-WAc"/>
+                            <constraint firstItem="JjD-Ve-vfs" firstAttribute="centerX" secondItem="yzL-4F-U5i" secondAttribute="centerX" id="JwK-PS-sEY"/>
+                            <constraint firstItem="MdY-Ov-tUE" firstAttribute="bottom" secondItem="PR1-Pd-7MP" secondAttribute="bottom" constant="40" id="McW-MU-UgQ"/>
+                            <constraint firstItem="JjD-Ve-vfs" firstAttribute="top" secondItem="MdY-Ov-tUE" secondAttribute="top" id="bhV-e1-BwC"/>
+                            <constraint firstItem="kCI-lu-O5u" firstAttribute="top" secondItem="yzL-4F-U5i" secondAttribute="top" id="egs-ik-aiL"/>
+                            <constraint firstAttribute="bottom" secondItem="kCI-lu-O5u" secondAttribute="bottom" id="iNs-Et-SXE"/>
+                            <constraint firstItem="PR1-Pd-7MP" firstAttribute="centerX" secondItem="JjD-Ve-vfs" secondAttribute="centerX" id="ktF-7d-v8y"/>
+                            <constraint firstItem="kCI-lu-O5u" firstAttribute="trailing" secondItem="MdY-Ov-tUE" secondAttribute="trailing" id="oU8-Au-Oec"/>
+                            <constraint firstItem="kCI-lu-O5u" firstAttribute="leading" secondItem="MdY-Ov-tUE" secondAttribute="leading" id="vq3-mN-Qt3"/>
+                            <constraint firstItem="rUp-tY-tNW" firstAttribute="leading" secondItem="MdY-Ov-tUE" secondAttribute="leading" constant="16" id="yGO-Kz-rQV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MdY-Ov-tUE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="xl9-Yu-IYV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rlx-ef-uMI">
+                            <connections>
+                                <action selector="incomeButton:" destination="uP7-K4-5ID" id="i9p-Ya-qqA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addCostsBtnLbl" destination="PR1-Pd-7MP" id="OVm-xV-3x6"/>
+                        <outlet property="costsBtnLabel" destination="0XH-5S-cgw" id="FJp-YO-9XY"/>
+                        <outlet property="currentBtnLabel" destination="aaO-Kf-m3t" id="4JY-xn-ZcN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jSr-zp-iEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920.8" y="133.00492610837438"/>
+        </scene>
+        <!--Costs-->
+        <scene sceneID="VLK-o1-768">
+            <objects>
+                <tableViewController id="xH9-Pb-cR9" customClass="CostsTVC" customModule="PaySmart" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zDz-l1-qeV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="costCell" id="42V-9R-UBq">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="42V-9R-UBq" id="7rG-NY-dk6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xH9-Pb-cR9" id="1uc-rz-3iZ"/>
+                            <outlet property="delegate" destination="xH9-Pb-cR9" id="HUQ-d2-OzR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Costs" id="Dst-kH-8lR">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="MRf-gE-mG5">
+                            <connections>
+                                <action selector="addItem:" destination="xH9-Pb-cR9" id="sbl-id-vee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KM0-qT-XL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2756" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1EO-vw-001">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qfu-QD-SPe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zdb-Zb-tAG">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="tintColor" red="1" green="0.99670672770000002" blue="0.94484974450000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.3302654109589041" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.99670672770000002" blue="0.94484974450000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LC8-EN-ys7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phN-lB-Gjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chart" width="853" height="1280"/>
+        <image name="main" width="204.72000122070312" height="307.20001220703125"/>
+    </resources>
+</document>

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C200A3DA223D346000633EC9 /* CostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200A3D9223D346000633EC9 /* CostsCell.swift */; };
-		C200A3DD223D8D8C00633EC9 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200A3DC223D8D8C00633EC9 /* AlertView.swift */; };
-		C2242BE6223AC0AA00C045C1 /* Costs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2242BE5223AC0A900C045C1 /* Costs.swift */; };
 		C2242C77223C188F00C045C1 /* CostModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2242C76223C188F00C045C1 /* CostModelDelegate.swift */; };
 		C25E7F2922330CE500ECC8D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E7F2822330CE500ECC8D0 /* AppDelegate.swift */; };
 		C25E7F2B22330CE500ECC8D0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E7F2A22330CE500ECC8D0 /* MainViewController.swift */; };
@@ -19,15 +17,14 @@
 		C25E7F3622330CE700ECC8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25E7F3422330CE700ECC8D0 /* LaunchScreen.storyboard */; };
 		C25E7F3E2233108C00ECC8D0 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E7F3D2233108C00ECC8D0 /* Button.swift */; };
 		C25E7F402233182C00ECC8D0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E7F3F2233182C00ECC8D0 /* InfoViewController.swift */; };
-		C25E7F442233186400ECC8D0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25E7F432233186400ECC8D0 /* Alert.swift */; };
 		C27D19E12239A82A0049F03D /* CostsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D19E02239A82A0049F03D /* CostsTVC.swift */; };
+		C2BA8AAC2246EB77001B0CC0 /* ExtensoinForInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BA8AAB2246EB77001B0CC0 /* ExtensoinForInfoVC.swift */; };
+		C2BA8AB12246ECFF001B0CC0 /* ExtensionForCostTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BA8AB02246ECFF001B0CC0 /* ExtensionForCostTVC.swift */; };
 		C2BD5533224598B400FB58E5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BD5532224598B400FB58E5 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C200A3D9223D346000633EC9 /* CostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostsCell.swift; sourceTree = "<group>"; };
-		C200A3DC223D8D8C00633EC9 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
-		C2242BE5223AC0A900C045C1 /* Costs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Costs.swift; sourceTree = "<group>"; };
 		C2242C76223C188F00C045C1 /* CostModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostModelDelegate.swift; sourceTree = "<group>"; };
 		C25E7F2522330CE500ECC8D0 /* PaySmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaySmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25E7F2822330CE500ECC8D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +36,9 @@
 		C25E7F3722330CE700ECC8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25E7F3D2233108C00ECC8D0 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		C25E7F3F2233182C00ECC8D0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		C25E7F432233186400ECC8D0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C27D19E02239A82A0049F03D /* CostsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostsTVC.swift; sourceTree = "<group>"; };
+		C2BA8AAB2246EB77001B0CC0 /* ExtensoinForInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensoinForInfoVC.swift; sourceTree = "<group>"; };
+		C2BA8AB02246ECFF001B0CC0 /* ExtensionForCostTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionForCostTVC.swift; sourceTree = "<group>"; };
 		C2BD5532224598B400FB58E5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +58,6 @@
 			children = (
 				C200A3D9223D346000633EC9 /* CostsCell.swift */,
 				C25E7F3D2233108C00ECC8D0 /* Button.swift */,
-				C200A3DC223D8D8C00633EC9 /* AlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,9 +89,10 @@
 		C25E7F2722330CE500ECC8D0 /* PaySmart */ = {
 			isa = PBXGroup;
 			children = (
+				C2BA8AAA2246EB4F001B0CC0 /* Extensions */,
 				C200A3DB223D347700633EC9 /* View */,
 				C2242C73223B0BB300C045C1 /* Delegate */,
-				C27D19DD2239A7C00049F03D /* Model */,
+				C27D19DD2239A7C00049F03D /* CoreDataManager */,
 				C25E7F4B2233213E00ECC8D0 /* Controller */,
 				C25E7F2822330CE500ECC8D0 /* AppDelegate.swift */,
 				C25E7F2C22330CE500ECC8D0 /* Main.storyboard */,
@@ -112,18 +110,25 @@
 				C25E7F2A22330CE500ECC8D0 /* MainViewController.swift */,
 				C25E7F3F2233182C00ECC8D0 /* InfoViewController.swift */,
 				C27D19E02239A82A0049F03D /* CostsTVC.swift */,
-				C25E7F432233186400ECC8D0 /* Alert.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		C27D19DD2239A7C00049F03D /* Model */ = {
+		C27D19DD2239A7C00049F03D /* CoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
-				C2242BE5223AC0A900C045C1 /* Costs.swift */,
 				C2BD5532224598B400FB58E5 /* CoreDataManager.swift */,
 			);
-			path = Model;
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		C2BA8AAA2246EB4F001B0CC0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA8AAB2246EB77001B0CC0 /* ExtensoinForInfoVC.swift */,
+				C2BA8AB02246ECFF001B0CC0 /* ExtensionForCostTVC.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,13 +207,12 @@
 				C200A3DA223D346000633EC9 /* CostsCell.swift in Sources */,
 				C25E7F2922330CE500ECC8D0 /* AppDelegate.swift in Sources */,
 				C27D19E12239A82A0049F03D /* CostsTVC.swift in Sources */,
-				C2242BE6223AC0AA00C045C1 /* Costs.swift in Sources */,
 				C25E7F3E2233108C00ECC8D0 /* Button.swift in Sources */,
-				C200A3DD223D8D8C00633EC9 /* AlertView.swift in Sources */,
+				C2BA8AB12246ECFF001B0CC0 /* ExtensionForCostTVC.swift in Sources */,
+				C2BA8AAC2246EB77001B0CC0 /* ExtensoinForInfoVC.swift in Sources */,
 				C2242C77223C188F00C045C1 /* CostModelDelegate.swift in Sources */,
 				C25E7F402233182C00ECC8D0 /* InfoViewController.swift in Sources */,
 				C2BD5533224598B400FB58E5 /* CoreDataManager.swift in Sources */,
-				C25E7F442233186400ECC8D0 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

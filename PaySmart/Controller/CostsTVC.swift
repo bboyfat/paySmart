@@ -40,7 +40,7 @@ class CostsTVC: UITableViewController {
 
     @IBAction func addItem(_ sender: Any) {
         addAlert()
-        
+        print("addAlert is not working")
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -57,8 +57,8 @@ class CostsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //let cell = tableView.dequeueReusableCell(withIdentifier: "costCell", for: indexPath)
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "costCell")
-        let cost = costs?[indexPath.row].cost
-        let name = costs?[indexPath.row].name
+        guard let cost = costs?[indexPath.row].cost else { return cell }
+        guard let name = costs?[indexPath.row].name else { return cell }
         cell.textLabel?.text = name
         cell.backgroundColor = UIColor.clear
         
@@ -88,59 +88,57 @@ class CostsTVC: UITableViewController {
         return [deleteAction]
     }
     
-    func addAlert(){
-        let alert = UIAlertController(title: "Add Cost", message: nil, preferredStyle: .alert)
-        
-        alert.addTextField { (text) in
-            text.placeholder = "Name Of Cost"
-        }
-        alert.addTextField { (text) in
-            text.placeholder = "Costs"
-            text.keyboardType = .numberPad
-        }
-        
-        
-        
-        let action = UIAlertAction(title: "OK", style: .default) { (action) in
-          
-       
-            
-            let context = CoreDataManager.shared.persistentContiner.viewContext
-            
-            let cost = NSEntityDescription.insertNewObject(forEntityName: "Cost", into: context) as! Cost
-            
-            cost.setValue(Int(alert.textFields![1].text!), forKey: "cost")
-            cost.setValue(alert.textFields![0].text, forKey: "name")
-            
-            
-            
-            // save context
-            
-            do{
-                try context.save()
-                self.costs?.append(cost)
-                
-//                self.delegate?.fetchCost()
-                self.tableView.reloadData()
-//                self.delegate?.didAddCosts()
-            } catch let saveErr{
-                print("Failed to save \(saveErr)")
-            }
-        }
-           
-           
-
-        
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
-    }
+//    func addAlert(){
+//        let alert = UIAlertController(title: "Add Cost", message: nil, preferredStyle: .alert)
+//        
+//        alert.addTextField { (text) in
+//            text.placeholder = "Name Of Cost"
+//        }
+//        alert.addTextField { (text) in
+//            text.placeholder = "Costs"
+//            text.keyboardType = .numberPad
+//        }
+//        
+//        
+//        
+//        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+//          
+//       
+//            
+//            let context = CoreDataManager.shared.persistentContiner.viewContext
+//            
+//
+//            let cost = NSEntityDescription.insertNewObject(forEntityName: "Cost", into: context) as! Cost
+//            
+//            cost.setValue(Int(alert.textFields![1].text!), forKey: "cost")
+//            cost.setValue(alert.textFields![0].text, forKey: "name")
+//            
+//            
+//            
+//            // save context
+//            
+//            do{
+//                try context.save()
+//                self.costs?.append(cost)
+//                
+////                self.delegate?.fetchCost()
+//                self.tableView.reloadData()
+////                self.delegate?.didAddCosts()
+//            } catch let saveErr{
+//                print("Failed to save \(saveErr)")
+//            }
+//        }
+//           
+//           
+//
+//        
+//        alert.addAction(action)
+//        self.present(alert, animated: true, completion: nil)
+//    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         self.delegate?.fetchCost()
     }
     
     
-    func checkCosts() {
-        
-    }
 }
